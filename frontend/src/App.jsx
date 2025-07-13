@@ -19,7 +19,7 @@ const App = () => {
       if (token) {
         try {
           axios.defaults.headers.common['x-auth-token'] = token;
-          const res = await axios.get('/api/auth');
+          const res = await axios.get('https://contact-gallery.vercel.app/api/auth');
           setUser(res.data);
           setIsAuthenticated(true);
         } catch (err) {

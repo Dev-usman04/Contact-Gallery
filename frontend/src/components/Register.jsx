@@ -25,7 +25,7 @@ const Register = ({ setAuthToken, showAlert }) => {
     
     setIsSubmitting(true);
     try {
-      const res = await axios.post('/api/auth/register', { name, email, password });
+      const res = await axios.post('https://contact-gallery.vercel.app/api/auth/register', { name, email, password });
       setAuthToken(res.data.token);
       showAlert('Account created successfully! 🎉', 'success');
       navigate('/dashboard');

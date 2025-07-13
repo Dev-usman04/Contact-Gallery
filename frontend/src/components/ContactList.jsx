@@ -12,7 +12,7 @@ const ContactList = ({ contacts, setContacts, showAlert }) => {
 
   const handleUpdate = async (id) => {
     try {
-      const res = await axios.put(`/api/contacts/${id}`, formData);
+      const res = await axios.put(`https://contact-gallery.vercel.app/api/contacts/${id}`, formData);
       setContacts(contacts.map((contact) => (contact._id === id ? res.data : contact)));
       setEditing(null);
       setFormData({ name: '', email: '', phone: '' });

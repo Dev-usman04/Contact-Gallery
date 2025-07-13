@@ -10,7 +10,7 @@ const Dashboard = ({ user, showAlert }) => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await axios.get('/api/contacts');
+        const res = await axios.get('https://contact-gallery.vercel.app/api/contacts');
         setContacts(res.data);
       } catch (err) {
         showAlert('Failed to fetch contacts', 'error');

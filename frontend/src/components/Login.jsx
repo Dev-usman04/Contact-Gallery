@@ -18,7 +18,7 @@ const Login = ({ setAuthToken, showAlert }) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const res = await axios.post('/api/auth/login', { email, password });
+      const res = await axios.post('https://contact-gallery.vercel.app/api/auth/login', { email, password });
       setAuthToken(res.data.token);
       showAlert('Welcome back! 🎉', 'success');
       navigate('/dashboard');

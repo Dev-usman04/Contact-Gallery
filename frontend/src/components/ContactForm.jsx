@@ -17,7 +17,7 @@ const ContactForm = ({ setContacts, showAlert }) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const res = await axios.post('/api/contacts', { name, email, phone });
+      const res = await axios.post('https://contact-gallery.vercel.app/api/contacts', { name, email, phone });
       setContacts((prev) => [res.data, ...prev]);
       setFormData({ name: '', email: '', phone: '' });
       showAlert('Contact added successfully! 🎉', 'success');
