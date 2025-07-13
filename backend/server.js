@@ -11,9 +11,9 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "https://contact-gallery-tt5q.vercel.app",
       "http://localhost:5173",
       "http://localhost:3000",
-      "https://contact-gallery-tt5q.vercel.app/",
     ],
     credentials: true,
   })
